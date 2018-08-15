@@ -18,10 +18,10 @@ Route::get('/', function () {
 Route::get('/custom', function () {
     //dd(config('app.developers'));
     //dd(config('blog.administrators'));
-    dd(config('blog.creator'));
+    //dd(config('blog.creator'));
 });
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
