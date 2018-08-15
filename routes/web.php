@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/custom', function () {
+    //dd(config('app.developers'));
+    //dd(config('blog.administrators'));
+    dd(config('blog.creator'));
+});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

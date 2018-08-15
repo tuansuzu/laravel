@@ -108,6 +108,10 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'developers' =>[
+        'mr.buiminhtuan@yahoo.com'
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
