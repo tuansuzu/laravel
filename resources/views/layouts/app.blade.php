@@ -81,7 +81,7 @@
       </main>
 
         <vue-login></vue-login>
-<example-component></example-component>
+
 
     <!-- Footer -->
     <footer class="site-footer">
