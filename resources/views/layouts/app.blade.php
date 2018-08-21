@@ -49,7 +49,13 @@
         <div class="topbar-right">
           <ul class="topbar-nav nav">
             <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
-           <li class="nav-item"><a class="nav-link active" href="javascript:;" data-toggle="modal" data-target="#loginModal">Login</a></li>
+
+            @if(auth()->check())
+              Hey {{auth()->user()->name}}
+            @else
+             <li class="nav-item"><a class="nav-link active" href="javascript:;" data-toggle="modal" data-target="#loginModal">Login</a></li>
+            @endif
+          
 
           </ul>
         </div>
@@ -80,7 +86,12 @@
 
       </main>
 
+
+      @if(!auth()->check())
+
         <vue-login></vue-login>
+
+        @endif
 
 
     <!-- Footer -->

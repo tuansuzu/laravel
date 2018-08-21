@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="form-group">
-                  <button class="btn btn-bold btn-block btn-primary" :disabled="!isValidLoginForm" type="submit">Login</button>
+                  <button class="btn btn-bold btn-block btn-primary" @click="attemptLogin" :disabled="!isValidLoginForm" type="submit">Login</button>
                 </div>
               </form>
 
@@ -50,6 +50,8 @@
 </template>
 
 <script>
+  import axios from 'axios';
+
     export default {
         data() {
             return{
@@ -73,6 +75,18 @@
                   }
                    
                     
+            },
+
+            attemptLogin()
+            {
+            console.log("post login by axios");
+               axios.post('/login',{
+                email: this.email, password: this.password, remember: this.remember
+               }).then(resp => {
+               location.reload()
+               }).catch(error => {
+               console.log(error)
+               })
             }
         },
 

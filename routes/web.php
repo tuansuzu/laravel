@@ -22,6 +22,8 @@ Route::get('/custom', function () {
 });
 
 
+Route::get('/logout', function(){auth()->logout();});
+
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
